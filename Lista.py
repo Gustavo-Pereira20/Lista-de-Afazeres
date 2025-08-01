@@ -1,4 +1,4 @@
-
+import time
 escolha = 0
 primeira = input("Olá, gostaria de fazer uma lista de afazeres? (S/N) ").upper()
 if primeira == "S":
@@ -6,7 +6,7 @@ if primeira == "S":
 while True:
 
     if escolha == 0:
-        folha =print ("""    ____________________________________
+        folha = print ("""    ____________________________________
     |                                  |
     |      Nova lista de Afazeres      | 
     |__________________________________|
@@ -22,7 +22,7 @@ while True:
     |   5. Sair                        |
     |__________________________________|
     """)
-    escolha = int(input("O quê você deseja fazer?"))
+    escolha = int(input("O quê você deseja fazer? "))
     if escolha == 1:
         tarefa = input("Tudo bem, o quê gostaria de adicionar na lista de tarefas? ")
         while True:
@@ -31,6 +31,7 @@ while True:
             if continuar == "N":
                 print("Tudo bem!")
                 escolha = 0
+                time.sleep(1)               
                 break
             else:
                 tarefa = input("O quê você gostaria de adicionar na lista de tarefas? ")
@@ -43,7 +44,7 @@ while True:
             c += 1
         input ("Aperte ENTER para continuar.")
         escolha = 0
-
+        time.sleep(1)
 
     elif escolha == 3:
         c = 0
@@ -52,11 +53,13 @@ while True:
             c += 1
         pergunta = (input("Gostaria de concluir algum item da lista? (S/N) ")).upper()
         if pergunta == "S":
-            n = int(input("Qual item?"))
+            n = int(input("Qual item? "))
             Listadetarefas[n] = Listadetarefas[n] + " ☑"
             print ("Item marcado!")
+            time.sleep(1)
         else:
             escolha = 0
+            time.sleep(1)
 
 
     elif escolha == 4:
@@ -75,10 +78,13 @@ while True:
             print ("Item excluido!")
             input ("Aperte ENTER para continuar.")
             escolha = 0
+            time.sleep(1)
         else:
             escolha = 0
+            time.sleep(1)
 
 
     elif escolha == 5:
         print("Ok, até mais!")
+        time.sleep(1)
         quit()
