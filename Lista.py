@@ -1,4 +1,5 @@
 import time
+from open import blocodenotas
 escolha = 0
 primeira = input("Olá, gostaria de fazer uma lista de afazeres? (S/N) ").upper()
 if primeira == "S":
@@ -41,6 +42,7 @@ while True:
         c = 0
         for i in Listadetarefas:
             print (f" {c}. {i}")
+            blocodenotas(Listadetarefas)
             c += 1
         input ("Aperte ENTER para continuar.")
         escolha = 0
@@ -54,9 +56,11 @@ while True:
         pergunta = (input("Gostaria de concluir algum item da lista? (S/N) ")).upper()
         if pergunta == "S":
             n = int(input("Qual item? "))
-            Listadetarefas[n] = Listadetarefas[n] + " ☑"
+            Listadetarefas[n] = Listadetarefas[n] + " (Concluído!)"
             print ("Item marcado!")
+            blocodenotas(Listadetarefas)
             time.sleep(1)
+            escolha = 0
         else:
             escolha = 0
             time.sleep(1)
@@ -76,6 +80,7 @@ while True:
                 print (f" {c}. {i} ")
                 c += 1
             print ("Item excluido!")
+            blocodenotas(Listadetarefas)
             input ("Aperte ENTER para continuar.")
             escolha = 0
             time.sleep(1)
