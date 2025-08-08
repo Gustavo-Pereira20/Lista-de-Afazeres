@@ -1,12 +1,10 @@
 import time
 from open import blocodenotas
-from open import recuperartarefas
 escolha = 0
 primeira = input("Olá, gostaria de fazer uma lista de afazeres? (S/N) ").upper()
 if primeira == "S":
 
-    Listadetarefas = [recuperartarefas]
-
+    Listadetarefas = []
 
     while True:
 

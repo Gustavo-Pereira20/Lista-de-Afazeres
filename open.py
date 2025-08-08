@@ -6,8 +6,4 @@ def blocodenotas(listinha):
             f.write(f" {c}. {i}\n")
             c += 1
 
-def recuperartarefas():
-    lista = []
-    with open("Afazeres.txt", "r") as arquivo:
-        for tarefa in arquivo:
-            lista.append(tarefa)
+
